@@ -58,11 +58,15 @@ git switch -c feature/cadastro-cliente
 ```
 
 # 📌 Padrão de nomes recomendados
+
+```
 Tipo	Exemplo
 Nova funcionalidade	feature/cadastro-cliente
 Correção de bug	bugfix/erro-validacao-cpf
 Refatoração	refactor/service-pagamento
 Documentação	docs/atualiza-readme
+```
+
 # 3️⃣ Atualizar sua branch antes de começar
 
 ```
