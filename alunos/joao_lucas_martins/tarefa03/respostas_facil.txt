@@ -1,0 +1,24 @@
+Exercício 1 - Telefone de Cliente
+1.A tabela está na 1FN?
+Não, pois o campo telefone está listando mais de um número de telefone
+
+2.Como modelar corretamente os telefones?
+Criando a tabela telefone e contendo o campo de chave estrangeira cliente_id, para relacionar cada número de telefone do cliente
+
+Exercício 2 — Pedido com vários produtos
+1.Qual problema de normalização existe?
+A campo produtos não está na 1° forma normal
+
+2.Como ficaria a estrutura após aplicar 1FN?
+É necessário criar um tabela(pedido_produto) para esse relacionamento entre produtos e pedido, pois pedido pode ter muitos produtos
+e produtos pode pertencer a muitos pedidos. Então cria-se a tabela pedido_produto para relacionar o pedido_id com produto_id, chamado
+de relacionamento composto.
+
+
+Exercício 3 — Curso e alunos
+1.Qual regra da 1FN está sendo violada?
+Que cada campo deve conter apenas um valor, a coluna alunos tem uma célula com mais de um valor.
+
+2.Como ficaria a modelagem correta?
+É necessário criar uma tabele(curso_aluno) para relacionar curso com aluno, pois curso pode ter muitos alunos, e alunos pode pertencer
+a muitos cursos.
