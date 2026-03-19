@@ -61,4 +61,3 @@ A tabela inicial seria transformada em duas tabelas `Alunos` e `Cursos`, cada um
 ![Modelagem do Exercício 03](imagens/exercicio03.PNG)
 
 ---
-
