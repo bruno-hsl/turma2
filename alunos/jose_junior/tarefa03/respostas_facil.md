@@ -4,10 +4,10 @@
 
 Tabela inicial:
 
-| cliente_id | nome |      telefones       |  
-|: --- :|: --- :|:--------------------:|
-| 1 | João | 9999-1111, 9888-2222 |  
-| 2 | Maria |      9777-3333       |
+| cliente_id | nome | telefones |
+|---|---|---|
+| 1 | João | 9999-1111, 9888-2222 |
+| 2 | Maria | 9777-3333 |
 
 **1. A tabela está na 1FN?**
    
