@@ -171,11 +171,7 @@ Tabela inicial:
 
 Perguntas:
 
-1. | produto_id | produto_nome | categoria_id | categoria_nome |
-|---|---|---|---|
-| 1 | Notebook | 10 | Informática |
-| 2 | Mouse | 10 | Informática |
-| 3 | Geladeira | 20 | Eletrodomésticos |
+1. Qual dependência funcional existe?
 2. Como ficaria a tabela na **3FN**?
 
 ---
