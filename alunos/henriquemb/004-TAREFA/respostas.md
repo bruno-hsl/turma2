@@ -59,3 +59,14 @@ CREATE TABLE pedido_produto (
 
 ### Dúvidas:
 1. Qual impacto real caso na tabela ``pedido_produto`` ao invés de usar ``PRIMARY KEY (pedido_id, produto_id)`` eu usar ``PRIMARY KEY (id)`` e criar um campo ``id`` auto-incremento com uma ``UNIQUE (pedido_id, produto_id)``?
+
+# Exercício 3 — Funcionário e Departamento
+### 1. Qual a cardinalidade?
+Cardinalidade: N:1;
+
+### 2. Onde fica a FK?
+FK: funcionário (departamento_id)
+
+### 3. Modele as tabelas
+![img_schema_exercicios-intermediarios.png](./img/schema_exercicios-intermediarios.png)
+![img_003-exercicio_funcionario-departamento.png](./img/003-exercicio_funcionario-departamento.png)
