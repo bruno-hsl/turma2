@@ -210,6 +210,8 @@ INNER JOIN pedidos p
 ON c.id = p.id_cliente;
 ```
 
+![SELECT com INNER JOIN](imagens/inner_join_exercicio06.PNG)
+
 Consulta com LEFT JOIN:
 
 ```sql
@@ -218,6 +220,8 @@ FROM clientes c
 LEFT JOIN pedidos p
 ON c.id = p.id_cliente;
 ```
+
+![SELECT com LEFT JOIN](imagens/left_join_exercicio06.PNG)
 
 2. **Explique a diferença**
 
