@@ -1,0 +1,177 @@
+1)Cliente e Pedido
+Cenário:
+Um cliente pode fazer vários pedidos.
+
+Quais tabelas existem?
+Tabela cliente e tabele pedido
+
+Qual a cardinalidade?
+Um cliente pode ter N pedidos
+
+Defina PK e FK
+cliente_id e pedido_id são PK
+cliente_id na tabela pedido é FK
+
+Faça um INNER JOIN
+
+create table cliente (
+	cliente_id   int primary key,
+	nome         varchar(255)
+);
+
+create table pedido (
+	pedido_id  int primary key,
+	cliente_id int,
+	cod_pedido int,
+	foreign key (cliente_id) references cliente(cliente_id)
+);
+
+insert into cliente values (1,'Miguel Martins');
+insert into pedido values (1,1,36277);
+
+select *
+from cliente c
+inner join pedido p on c.cliente_id = p.cliente_id;
+
+
+
+
+Exercício 2 — Pedido e Produto
+Cenário:
+
+Um pedido pode ter vários produtos
+Um produto pode estar em vários pedidos
+
+Perguntas:
+Qual o tipo de relacionamento?
+Relacionameto  N:N entre pedido e produto
+
+Qual tabela intermediária criar?
+Criar tabela pedido_produto que vai ter a chave composta entre pedido e produto
+
+Defina chave composta
+A chave composta define que entre pedido e produto não pode ter
+duplicidade de chaves estrangeiras no relacionamento das tabelas.
+
+Monte as tabelas
+create table produto(
+	produto_id int primary key,
+	nome varchar(255),
+	valor decimal(10,2)
+);
+
+create table pedido_produto(
+	pedido_id int,
+	produto_id int,
+	valor_produto decimal(10,2),
+	primary key (pedido_id, produto_id),
+	foreign key (pedido_id) references pedido(pedido_id),
+	foreign key (produto_id) references produto(produto_id)
+);
+
+Exercício 3 — Funcionário e Departamento
+Cenário:
+
+Um funcionário pertence a um departamento
+Um departamento tem vários funcionários
+
+Perguntas:
+Qual a cardinalidade?
+1:N departamento pode ter muitos funcionários
+
+Onde fica a FK?
+A FK fica em funcionário
+
+Modele as tabelas
+
+create table departamento(
+	departamento_id int primary key,
+	nome varchar(255)
+);
+
+create table funcionario(
+	funcionario_id int primary key,
+	nome varchar(255),
+	departamento_id int,
+	foreign key (departamento_id) references departamento(departamento_id)
+);
+
+Exercício 4 — Índices
+Cenário:
+
+Tabela de pedidos com milhares de registros
+
+Perguntas:
+Em quais colunas você criaria índices?
+Nas colunas pedido_id e cliente_id
+Por quê?
+Porque indexa a consulta mais rápida nos pedidos de um cliente específico
+
+
+Exercício 5 — Sistema Escolar
+Cenário:
+
+Alunos fazem disciplinas
+Professores ministram disciplinas
+Perguntas:
+Identifique relacionamentos
+
+Existe N:N?
+Existe entre as aluno e disciplina
+
+Quais tabelas criar?
+Tabela aluno
+Tabela professor
+Tabela disciplina
+Tabela aluno_disciplina
+
+Monte o DER (imagem)
+create table aluno(
+	aluno_id int primary key,
+	nome varchar(255)
+);
+
+create table professor(
+	professor_id int primary key,
+	nome varchar(255)
+);
+
+create table disciplina(
+	disciplina_id int primary key,
+	nome_disciplina varchar(255),
+	professor_id int ,
+	foreign key(professor_id) references professor(professor_id)
+);
+
+create table aluno_disciplina(
+	aluno_id int,
+	disciplina_id int,
+	primary key (aluno_id, disciplina_id),
+	foreign key (aluno_id) references aluno(aluno_id),
+	foreign key (disciplina_id) references disciplina(disciplina_id)
+
+);
+
+Exercício 6 — Joins
+Dadas as tabelas:
+
+Clientes
+Pedidos
+
+Perguntas:
+Faça:
+INNER JOIN
+LEFT JOIN
+Explique a diferença
+Inner join traz todos os dados que estão entre as tabelas quando existe relação, já
+Left join traz todos dos dados da tabela a esquerda mesmo que não exista relação.
+
+Nessa consulta traz todos os cliente que tem pedidos:
+select c.nome , p.pedido_id
+from cliente c
+inner join pedido p on c.cliente_id = p.cliente_id;
+
+Nessa consulta traz todos os cliente mesmo que não tenha pedidos:
+select c.nome, p.pedido_id
+from cliente c
+left join pedido p on c.cliente_id = p.cliente_id;
