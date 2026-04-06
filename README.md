@@ -204,3 +204,30 @@ Nesta tarefa você irá praticar:
 
 🧪 **Acessar tarefa:**  
 [004_TAREFA_MODELAGEM.md](https://github.com/fernandoericofilho/turma2/blob/main/tarefas/004_TAREFA_MODELAGEM.md)
+
+---
+
+## 📌 Tarefa 05 – Sistema de Biblioteca com Spring Boot + H2 + Flyway
+
+Nesta tarefa você irá desenvolver um **sistema de biblioteca** que gerencia **empréstimos de livros**, aplicando conceitos de **Spring Boot**, **H2**, **Flyway**, e **persistência de dados**.
+
+Você irá praticar:
+
+- Criação de **entidades**: Livro, Leitor, Empréstimo e LivroEmprestimo
+- Relacionamentos **1:N** (Leitor → Empréstimo) e **N:N** (Empréstimo ↔ Livro)
+- Criação de **migrações Flyway** para criação de tabelas e inserção de dados de exemplo
+- Implementação de **Repositories** e **Serviços** para gerenciar empréstimos
+- Testes unitários de **persistência de dados**
+- Consultas SQL no **console H2**: listar livros emprestados e contar empréstimos por livro
+
+### Desafios Extras
+- Listar livros emprestados por um determinado leitor
+- Criar consulta nativa para contar empréstimos de cada livro
+
+---
+
+📄 **Material de estudo:**  
+[005_PRIMEIRO_PROJETO.MD](https://github.com/fernandoericofilho/turma2/blob/main/documentos/005_PRIMEIRO_PROJETO.MD)
+
+🧪 **Acessar tarefa:**  
+[005_TAREFA_PRIMEIRO_PROJETO.MD](https://github.com/fernandoericofilho/turma2/blob/main/tarefas/005_TAREFA_PRIMEIRO_PROJETO.MD)
