@@ -1,0 +1,49 @@
+Exercício 01 - Cliente e Pedido
+1 - Quais tabelas existem?
+Tabelas: cliente e pedido.
+
+2 - Qual a cardinalidade?
+Um para muitos (1:N).
+
+3 - Defina PK e FK:
+PK (Primary Key): Significa chave-primária. É a coluna de identificação de uma linha na tabela, tem valor único e não pode ser nula.
+FK (Foreign Key): Significa chave-estrangeira. É a coluna que faz referência à chave-primária em outra tabela.
+
+4 - Faça um INNER JOIN:
+SELECT c.nome
+FROM cliente c
+INNER JOIN pedido p ON c.cliente_id = p.cliente_id;
+
+
+Exercício 02 - Pedido e Produto
+1 - Qual o tipo de relacionamento?
+Muitos para muitos (N:N).
+
+2 - Qual tabela intermediária criar?
+Tabela produto_pedido contendo o 'id' das tabelas pedido e produto como FK.
+
+3 - Defina chave composta:
+É a chave formada por mais de uma coluna para identificar uma linha da tabela.
+
+4 - Monte as tabelas:
+CREATE TABLE produto (
+    id_produto INT PRIMARY KEY,
+    nome VARCHAR(100),
+    preco DECIMAL(10,2)
+);
+
+CREATE TABLE pedido (
+    id_pedido INT PRIMARY KEY,
+    data DATE
+);
+
+CREATE TABLE item_pedido (
+    id_pedido INT,
+    id_produto INT,
+    quantidade INT,
+    preco_compra DECIMAL(10,2)
+    PRIMARY KEY (id_pedido, id_produto),
+    FOREIGN KEY (id_pedido) REFERENCES pedido(id_pedido),
+    FOREIGN KEY (id_produto) REFERENCES produto(id_produto)
+);
+
