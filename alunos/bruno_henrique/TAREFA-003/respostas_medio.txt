@@ -1,0 +1,26 @@
+Exercício 4 — Funcionários e Departamento
+
+4.1-Existe dependência transitiva?
+sim
+
+4.2-A tabela está na 3FN?
+Não
+
+4.3-Como separar corretamente?
+É um relacionamento n para n então é necessário criar as tabelas "funcionario", "departamento"
+e uma tabela intermediária "funcionario_departamento"
+
+Exercício 5 — Produtos e Categoria
+
+5.1-Qual dependência funcional existe?
+Categoria_id
+
+5.2-Como ficaria a tabela na 3FN?
+
+Exercício 6 — Matrícula de alunos
+
+6.1-Quais atributos dependem de quais?
+aluno_id determina aluno_nome e curso_id
+
+6.2-Separe as tabelas corretamente.
+A tabela foi dividida em "aluno", "curso" e uma tabela intermediaria "curso_aluno".
