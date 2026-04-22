@@ -1,0 +1,24 @@
+Exercício 1 — Telefones de Cliente
+
+1.1-A tabela está na 1FN?
+Não, porque o campo telefones está armazenando múltiplos valores, o que fere a Primeira Forma Normal.
+
+1.2-Como modelar corretamente os telefones?
+O correto é separar os telefones em utra tabela e criar um relacionamento com a tabela cliente.
+
+Exercício 2 — Pedido com vários produtos
+
+2.1-Qual problema de normalização existe?
+A tabela não está de acordo com a primeira forma normal,
+pois o campo produtos quarda mais de um valor em um único atributo.
+
+2.2-Como ficaria a estrutura após aplicar 1FN?
+A tabela foi dividida em "pedido", "produtos" e uma tabela intermediária "pedido_produto".
+
+Exercício 3 — Curso e alunos
+
+3.1-Qual regra da 1FN está sendo violada?
+A regra da atomicidade.
+
+3.2-Como ficaria a modelagem correta?
+A tabela foi dividida em "curso", "alunos" e uma tabela intermediaria "curso_aluno".
