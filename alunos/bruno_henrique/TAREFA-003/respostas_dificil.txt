@@ -1,0 +1,30 @@
+Exercício 7 — Pedido completo
+
+7.1-Identifique as dependências funcionais
+pedido_id -> cliente_nome e  cliente_cidade
+cliente_nome -> cliente_cidade
+produto_nome -> preco
+
+7.2-Normalize até 3FN
+
+Exercício 8 — Venda e vendedor
+
+8.1-Existe dependência transitiva?
+venda_id -> vendedor_nome e loja_nome
+loja_nome -> loja_cidade
+
+8.2-Como dividir as tabelas?
+
+Exercício 9 — Sistema de universidade
+
+9.1-Existe relação N:N?
+
+9.2-Quais tabelas devem existir?
+
+Exercício 10 — Sistema de e-commerce
+
+10.1-Identifique dependências funcionais
+
+10.2-Normalize até 3FN
+
+11.3-Quais seriam as tabelas finais?
