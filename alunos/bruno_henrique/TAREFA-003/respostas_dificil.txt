@@ -18,13 +18,18 @@ loja_nome -> loja_cidade
 Exercício 9 — Sistema de universidade
 
 9.1-Existe relação N:N?
-
+Sim
 9.2-Quais tabelas devem existir?
+Aluno, disciplina, professor, aluno_professor e aluno_professor_disciplina.
 
 Exercício 10 — Sistema de e-commerce
 
 10.1-Identifique dependências funcionais
+pedido_id -> cliente_nome e cliente_email
+cliente_email -> cliente_nome
+produto_nome -> categoria
 
 10.2-Normalize até 3FN
 
 11.3-Quais seriam as tabelas finais?
+Cliente, categoria, produto, pedido e produto_pedido.
