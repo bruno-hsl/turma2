@@ -32,3 +32,27 @@ Tabela: "pedido_produto"
 Exercicio-002
 2.4-Monte as tabelas
 Exercicio-002
+
+🟡 Exercício 3 — Funcionário e Departamento
+Cenário:
+
+Um funcionário pertence a um departamento
+Um departamento tem vários funcionários
+
+Perguntas:
+3.1-Qual a cardinalidade?
+1:N
+
+3.2-Onde fica a FK?
+Na tabela "funcionario".
+
+3.3-Modele as tabelas
+
+🟡 Exercício 4 — Índices
+Cenário:
+
+Tabela de pedidos com milhares de registros
+
+Perguntas:
+4.1-Em quais colunas você criaria índices?
+4.2-Por quê?
