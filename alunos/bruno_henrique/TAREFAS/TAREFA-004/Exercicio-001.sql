@@ -25,3 +25,10 @@ SELECT cliente.nome
 FROM pedido
 INNER JOIN cliente ON
 	cliente.id = pedido.cliente_id
+
+SELECT cliente.nome
+FROM cliente
+LEFT JOIN pedido ON
+	pedido.cliente_id = cliente.id
+	
+
