@@ -1,0 +1,34 @@
+🟢 Exercício 1 — Cliente e Pedido
+Cenário:
+
+Um cliente pode fazer vários pedidos.
+
+Perguntas:
+1.1-Quais tabelas existem?
+Tabelas: "cliente" e "pedido".
+
+1.2-Qual a cardinalidade?
+1 para muitos.
+
+1.3-Defina PK e FK
+Exercicio-001
+1.4-Faça um INNER JOIN
+Exercicio-001
+
+🟢 Exercício 2 — Pedido e Produto
+Cenário:
+
+Um pedido pode ter vários produtos
+Um produto pode estar em vários pedidos
+
+Perguntas:
+2.1-Qual o tipo de relacionamento?
+N:N
+
+2.2-Qual tabela intermediária criar?
+Tabela: "pedido_produto"
+
+2.3-Defina chave composta
+Exercicio-002
+2.4-Monte as tabelas
+Exercicio-002
